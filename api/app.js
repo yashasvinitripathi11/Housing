@@ -89,6 +89,8 @@ const port = process.env.PORT || 8800;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+app.use(express.static(path.join(__dirname, '../client/public')));
+
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
@@ -151,11 +153,11 @@ async function runChat(userInput) {
 }
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/chatbot.html'));
+  res.sendFile(path.join(__dirname + '../client/public/chatbot.html'));
 });
 
 app.get('/loader.gif', (req, res) => {
-  res.sendFile(path.join(__dirname + '/loader.gif'));
+  res.sendFile(path.join(__dirname + '../client/public/loader.gif'));
 });
 
 app.post('/generate', async (req, res) => {
