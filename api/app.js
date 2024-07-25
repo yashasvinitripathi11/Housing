@@ -71,6 +71,8 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from '@google/generative-ai';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 // Import routes
 import authRoute from './routes/auth.route.js';
@@ -84,6 +86,8 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 8800;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use(express.json());
