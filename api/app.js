@@ -153,11 +153,11 @@ async function runChat(userInput) {
 }
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '../client/public/chatbot.html'));
+  res.sendFile(path.join(__dirname + '/chatbot.html'));
 });
 
 app.get('/loader.gif', (req, res) => {
-  res.sendFile(path.join(__dirname + '../client/public/loader.gif'));
+  res.sendFile(path.join(__dirname + '/loader.gif'));
 });
 
 app.post('/generate', async (req, res) => {
