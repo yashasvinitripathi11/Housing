@@ -99,7 +99,7 @@
       userInput.value = ''; // Clear input field
       console.log(userMessage)
       try {
-        const response = await fetch('https://housing-8ogg.onrender.com/generate', {
+        const response = await fetch('http://localhost:8800/generate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
