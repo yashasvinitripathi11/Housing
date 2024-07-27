@@ -39,7 +39,11 @@ function App() {
           path: "/register",
           element: <Register />,
         },
-        
+        {
+          path: "/:id",
+          element: <SinglePage />,
+          loader: singlePageLoader,
+        },
       ],
     },
     {
