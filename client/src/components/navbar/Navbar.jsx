@@ -7,9 +7,9 @@ import { useNotificationStore } from "../../lib/notificationStore";
 function Navbar() {
   const [open, setOpen] = useState(false);
 
-  // const openNewPage = () => {
-  //   window.open("/chatbot.html", "_blank");
-  // };
+  const openNewPage = () => {
+    window.open("/chatbot.html", "_blank");
+  };
 
   const { currentUser } = useContext(AuthContext);
 
@@ -65,9 +65,9 @@ function Navbar() {
           <a href="/">Sign in</a>
           <a href="/">Sign up</a>
         </div>
-        {/* <button className="menuBtn" onClick={openNewPage}>
+        { <button className="menuBtn" onClick={openNewPage}>
             Your personal guide AI
-          </button> */}
+          </button> }
        
       </div>
       
