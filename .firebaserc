@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "housing-bdcc8",
+    "frontend": "housing-bdcc8"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
