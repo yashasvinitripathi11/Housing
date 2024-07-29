@@ -24,21 +24,21 @@ const port = process.env.PORT || 8800;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const corsOptions = {
-  origin: "https://estate-housing-8eb9a.web.app",
-  methods: "GET,POST,PUT,DELETE",
-  allowedHeaders: "Content-Type,Authorization",
-  optionsSuccessStatus: 200,
-  credentials: true,
-};
+// const corsOptions = {
+//   origin: "https://estate-housing-8eb9a.web.app",
+//   methods: "GET,POST,PUT,DELETE",
+//   allowedHeaders: "Content-Type,Authorization",
+//   optionsSuccessStatus: 200,
+//   credentials: true,
+// };
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, '../client/public')));
 
-// app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
-// app.use(express.json());
+app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
+app.use(express.json());
 app.use(cookieParser());
 
 app.use('/api/auth', authRoute);
