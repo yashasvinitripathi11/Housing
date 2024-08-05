@@ -1,6 +1,5 @@
 // import { Server } from "socket.io";
 
-<<<<<<< HEAD
 // const io = new Server({
 //     cors: {
 //         origin: "http://localhost:5173",
@@ -43,7 +42,6 @@
 
 // io.listen("4000");
 
-=======
 const io = new Server({
   cors: {
     origin: "https://estate-housing-8eb9a.web.app/",
@@ -82,4 +80,3 @@ io.on("connection", (socket) => {
 });
 
 io.listen("4000");
->>>>>>> origin/main
